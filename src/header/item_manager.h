@@ -32,3 +32,4 @@ void ItemValuesGeneratorMenu();
 void item_options();
 void save_single_item(ItemVector item_selected);
 void selected_item_options(ItemVector item_selected);
+void name_evaluator();

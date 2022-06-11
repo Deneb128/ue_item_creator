@@ -113,16 +113,40 @@ void values5_evaluator()
 		last_value5 = value5_value;
 	}
 }
+void name_evaluator()
+{
+	bool quit = false;
+	do{
+		std::cout << "Insert a name for the item: \n";
+		std::getline(std::cin >> std::ws, item_name);
+		if(list_vec_items.empty()){
+			quit = true;
+		}
+		else
+		{
+			for(const auto& x: list_vec_items)
+			{
+				if(x.at(0)->GetName() == item_name){
+					std::cout << "Name already used\n";
+				}
+				else{
+					quit = true;
+				}
+			}
+		}
+	}while(quit == false);
+}
+
 void create_items()
 {
 	std::cout << "CREATING A NEW ITEM\n";
-	std::cout << "Insert a name for the item: \n";
-	std::getline(std::cin >> std::ws, item_name);
+
 	std::cout << "What you want to work on, weapon or armor?\nPress 0 for WEAPON 1 for ARMOR\n";
 	std::cin >> item_type;
 	//we initialize the first item
+	name_evaluator(); //we setup a unique name
 	values_evaluator(vec_values, item_type); //values from 0 to 5 for +0 value (base)
-
+	
 	//set up item +0
 	std::shared_ptr<Item> new_item = std::make_shared<Item>(vec_values, item_type);
 	new_item->SetName(item_name);

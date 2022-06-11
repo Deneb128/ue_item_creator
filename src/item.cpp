@@ -29,10 +29,10 @@ void Item::GenerateRealValues(int value5)
 {
 	if (this->GetItemType() == ItemType::WEAPON)
 	{
-		this->real_magic_min_value = this->GetValue(1) + (value5 * 2);
-		this->real_phys_min_value = this->GetValue(3) + (value5 * 2);
-		this->real_magic_max_value = this->GetValue(2) + (value5 * 2);
-		this->real_phys_max_value = this->GetValue(4) + (value5 * 2);
+		this->real_magic_min_value = this->GetValue(1) != 0 ?  (this->GetValue(1) + (value5 * 2)) : 0;
+		this->real_phys_min_value = this->GetValue(3) != 0 ?  (this->GetValue(3) + (value5 * 2)) : 0;
+		this->real_magic_max_value = this->GetValue(2) != 0 ?  (this->GetValue(2) + (value5 * 2)) : 0;
+		this->real_phys_max_value = this->GetValue(4) != 0 ?  (this->GetValue(4) + (value5 * 2)) : 0;
 	}
 	else if (this->GetItemType() == ItemType::ARMOR)
 	{
