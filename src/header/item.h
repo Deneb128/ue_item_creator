@@ -16,7 +16,7 @@ std::ostream& operator<<(std::ostream& os, const ItemType& item_type)
 
 
 constexpr int MAX_VALUES = 5;
-constexpr int MAX_UPGRADE = 2;
+constexpr int MAX_UPGRADE = 9;
 constexpr int MIN_PHYS_WEAPON_POS = 3;
 constexpr int MAX_PHYS_WEAPON_POS = 4;
 constexpr int MIN_MAGIC_WEAPON_POS = 1;
