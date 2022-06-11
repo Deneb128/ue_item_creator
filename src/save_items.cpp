@@ -1,4 +1,4 @@
-#include "item_manager.h"
+#include "header/item_manager.h"
 
 void save_items()
 {
@@ -16,7 +16,6 @@ void save_items()
 			try {
 				myfile.open("navicat.txt", std::ios::app);
 				myfile << elem.at(item_counts)->GetName() << std::endl;
-				myfile << "\n";
 				myfile.close();
 			}
 			catch (std::exception const& e) {

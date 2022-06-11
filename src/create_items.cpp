@@ -1,4 +1,4 @@
-#include "item_manager.h"
+#include "header/item_manager.h"
 
 void values_evaluator(std::vector<int>& vec_values, ItemType item_type)
 {
@@ -91,21 +91,8 @@ void values_evaluator(std::vector<int>& vec_values, ItemType item_type)
 		}
 	}
 }
-
-void create_items()
+void values5_evaluator()
 {
-	std::cout << "CREATING A NEW ITEM\n";
-	std::cout << "Insert a name for the item: \n";
-	std::cin >> item_name;	
-	std::cout << "What you want to work on, weapon or armor?\nPress 0 for WEAPON 1 for ARMOR\n";
-	std::cin >> item_type;
-	values_evaluator(vec_values, item_type);
-
-	std::shared_ptr<Item> new_item = std::make_shared<Item>(vec_values, item_type);
-	new_item->SetName(item_name);
-	new_item->GenerateRealValues(value5_value);
-	vec_items.emplace_back(std::move(new_item));
-
 	for (int n = 1; n <= MAX_UPGRADE; n++)
 	{
 		do {
@@ -125,6 +112,26 @@ void create_items()
 		} while (last_value5 >= value5_value);
 		last_value5 = value5_value;
 	}
+}
+void create_items()
+{
+	std::cout << "CREATING A NEW ITEM\n";
+	std::cout << "Insert a name for the item: \n";
+	std::cin >> item_name;	
+	std::cout << "What you want to work on, weapon or armor?\nPress 0 for WEAPON 1 for ARMOR\n";
+	std::cin >> item_type;
+	//we initialize the first item
+	values_evaluator(vec_values, item_type); //values from 0 to 5 for +0 value (base)
+
+	//set up item +0
+	std::shared_ptr<Item> new_item = std::make_shared<Item>(vec_values, item_type);
+	new_item->SetName(item_name);
+	new_item->GenerateRealValues(value5_value);
+	vec_items.emplace_back(std::move(new_item));
+
+	//setting up all the other upgrades
+	values5_evaluator();
+
 	list_vec_items.emplace_back(std::move(vec_items));
 	vec_values.clear();
 	std::cout << "\n\n\n";

@@ -1,6 +1,6 @@
 // ItemValuesGenerator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include "item_manager.h"
+#include "header/item_manager.h"
 
 void ItemValuesGenerator()
 {
