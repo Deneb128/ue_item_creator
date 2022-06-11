@@ -2,7 +2,7 @@
 //
 #include "header/item_manager.h"
 
-void ItemValuesGenerator()
+void ItemValuesGeneratorMenu() //MAIN MENU
 {
 	int answer = 0;
 	do {
@@ -32,6 +32,6 @@ void ItemValuesGenerator()
 
 int main()
 {
-	ItemValuesGenerator();
+	ItemValuesGeneratorMenu();
 	return 0;
 }

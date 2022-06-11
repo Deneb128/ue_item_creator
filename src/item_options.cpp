@@ -23,6 +23,7 @@ void item_options()
 		std::cin >> answer_string;
 		std::cout << "\n\n\n";
 		std::for_each(answer_string.begin(), answer_string.end(), [](char& c) { c = ::tolower(c); }); //answer all lowercase
+		//ITEM LIST MENU
 		if (answer_string == "exit")
 			std::exit(0);
 		else if (answer_string == "back")
@@ -64,7 +65,7 @@ void selected_item_options(ItemVector item_selected)
 		std::cout << "4: Main Menu" << std::endl;
 		std::cout << "5: Exit" << std::endl;
 		std::cin >> answer;
-		switch (answer)
+		switch (answer)  //SELECTED ITEM MENU
 		{
 			case 0:
 			{
@@ -75,7 +76,7 @@ void selected_item_options(ItemVector item_selected)
 				int up = 0;
 				for(const auto&x : item_selected)
 				{
-					std::cout << x->GetName() << "+" << up << " Real Values: \n";
+					std::cout << x->GetName() << "+" << up << " Values: \n";
 					x->PrintItemValues();
 					std::cout<<"\n";
 					++up;
@@ -100,7 +101,7 @@ void selected_item_options(ItemVector item_selected)
 			case 4:
 			{
 				std::cout << "\n\n\n\n";
-				ItemValuesGenerator();
+				ItemValuesGeneratorMenu();
 			}break;
 			case 5:
 			{

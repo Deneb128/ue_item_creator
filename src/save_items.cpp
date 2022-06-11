@@ -58,7 +58,7 @@ void save_single_item(ItemVector item_selected)
 		myfile.exceptions(std::ofstream::eofbit | std::ofstream::failbit | std::ofstream::badbit);
 		try {
 			myfile.open("navicat.txt", std::ios::app);
-			myfile << item_selected.at(0)->GetName() << std::endl;
+			myfile << item_selected.at(0)->GetName() << std::endl; //NAME OF ITEM ON TOP
 			myfile << "\n";
 			myfile.close();
 		}

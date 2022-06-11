@@ -42,7 +42,7 @@ class Item
 		ItemType GetItemType() { return m_item_type; };
 		void PrintRealValues();
 		void PrintValues(bool toFile = false);
-		int GetMinPhysValue() { return real_phys_min_value; };
+		int GetMinPhysValue() { return real_phys_min_value; }; //to do: vector
 		int GetMinMagicValue() { return real_magic_min_value; };
 		int GetMaxPhysValue() { return real_phys_max_value; };
 		int GetMaxMagicValue() { return real_magic_max_value; };

@@ -37,7 +37,7 @@ void print_list()
 			case 3:
 			{
 				std::cout << "\n\n\n\n";
-				ItemValuesGenerator();
+				ItemValuesGeneratorMenu();
 			}break;
 			case 4:
 			{
@@ -45,5 +45,5 @@ void print_list()
 			}
 		}
 		
-	} while (answer != 3);
+	} while (answer != 4);
 }

@@ -46,10 +46,9 @@ void Item::GenerateRealValues(int value5)
 void Item::PrintRealValues()
 {
 	std::cout << "-------------------------------------------"<< std::endl;
-	std::cout << "Min Phys Value:" << this->GetMinPhysValue() << std::endl;
-	std::cout << "Min Magic Value:" << this->GetMinMagicValue() << std::endl;
-	std::cout << "Max Phys Value:" << this->GetMaxPhysValue() << std::endl;
-	std::cout << "Max Magic Value:" << this->GetMaxMagicValue() << std::endl;
+	std::cout << "Min Phys Value\tMin Magic Valuelue  Max Phys Value  Max Magic Value" << std::endl;
+	std::cout << this->GetMinPhysValue() << "\t\t" << this->GetMinMagicValue() << "\t\t    " << this->GetMaxPhysValue() << "\t\t    " << this->GetMaxMagicValue() << std::endl;
+
 	std::cout << "-------------------------------------------" << std::endl;
 	return;
 }
@@ -57,12 +56,8 @@ void Item::PrintRealValues()
 void Item::PrintItemValues()
 {
 	std::cout << "-------------------------------------------" << std::endl;
-	std::cout << "Value0:" << this->GetValue(0) << std::endl;
-	std::cout << "Value1:" << this->GetValue(1) << std::endl;
-	std::cout << "Value2:" << this->GetValue(2) << std::endl;
-	std::cout << "Value3:" << this->GetValue(3) << std::endl;
-	std::cout << "Value4:" << this->GetValue(4) << std::endl;
-	std::cout << "Value5:" << this->GetValue(5) << std::endl;
+	std::cout << "Value0\tValue1\tValue2\tValue3\tValue4\tValue5" << std::endl;
+	std::cout << this->GetValue(0) << "\t" << this->GetValue(1) << "\t" << this->GetValue(2) << "\t" << this->GetValue(3) << "\t" << this->GetValue(4) << "\t" << this->GetValue(5) << std::endl;
 	std::cout << "-------------------------------------------" << std::endl;
 	return;
 }

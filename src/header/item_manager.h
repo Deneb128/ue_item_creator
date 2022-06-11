@@ -28,7 +28,7 @@ void save_items();
 void create_items();
 void values_evaluator(std::vector<int>& vec_values, ItemType item_type);
 void print_list();
-void ItemValuesGenerator();
+void ItemValuesGeneratorMenu();
 void item_options();
 void save_single_item(ItemVector item_selected);
 void selected_item_options(ItemVector item_selected);
