@@ -17,8 +17,8 @@ void item_options()
 		}
 	
 		
-		
-		std::cout << "Select the item" << std::endl;
+		std::cout << "\n\n";
+		std::cout << "Select the item typing the corrispondent number" << std::endl;
 		std::cout << "You can go back typing \"back\" or quit typing \"exit\""<< std::endl;
 		std::cin >> answer_string;
 		std::cout << "\n\n\n";

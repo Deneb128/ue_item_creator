@@ -74,9 +74,15 @@ void Item::PrintValues(bool toFile)
 		myfile.exceptions(std::ofstream::eofbit | std::ofstream::failbit | std::ofstream::badbit);
 		try {
 			myfile.open("navicat.txt", std::ios::app);
+			int value = 0;
 			for (const auto& elem : this->GetValuesVector())
 			{
-				myfile << elem << "\t";
+				if(value == 5){
+					myfile << elem;
+				}else{
+					myfile << elem << "\t";
+				}	
+				++value;
 			}
 			myfile << "\n";
 			myfile.close();

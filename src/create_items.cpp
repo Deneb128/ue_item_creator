@@ -117,7 +117,7 @@ void create_items()
 {
 	std::cout << "CREATING A NEW ITEM\n";
 	std::cout << "Insert a name for the item: \n";
-	std::cin >> item_name;	
+	std::getline(std::cin >> std::ws, item_name);
 	std::cout << "What you want to work on, weapon or armor?\nPress 0 for WEAPON 1 for ARMOR\n";
 	std::cin >> item_type;
 	//we initialize the first item

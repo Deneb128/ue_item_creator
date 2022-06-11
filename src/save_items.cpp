@@ -59,7 +59,6 @@ void save_single_item(ItemVector item_selected)
 		try {
 			myfile.open("navicat.txt", std::ios::app);
 			myfile << item_selected.at(0)->GetName() << std::endl; //NAME OF ITEM ON TOP
-			myfile << "\n";
 			myfile.close();
 		}
 		catch (std::exception const& e) {
